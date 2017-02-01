@@ -1,0 +1,125 @@
+$darkbg : rgba(0,0,0, 0.7);
+$lightbg : rgba(255,255,255, 0.7);
+.propup-fullheight{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    bottom:0;
+    opacity: 0;
+    width: 100%;
+    overflow-y: auto;
+    background: #fff;
+    -webkit-transition : all 0.3s;
+    transition: all 0.3s;
+    z-index: 1;
+}
+.propup-pay{
+    background: $darkbg;
+    z-index: 11;
+    > div{
+        width: 100%;
+        background: #fff;
+        position:absolute;
+        bottom:0;
+    }
+}
+.propup-pay-list{
+    li{
+        background: none;
+        border-bottom: 1px solid #e8e8e8;
+        margin: 0 1.5rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        -webkit-tap-highlight-color: #f00;
+        i{
+            display: inline-block;
+            width: 3.2rem;
+            height: 3.2rem;
+            margin-right: 1rem;
+           /* &.icon-change{
+                background: url('../images/lq.png') no-repeat 50% 50% / 100% auto;
+            }
+            &.icon-wechat{
+                background: url('../images/wx.png') no-repeat 50% 50% / 100% auto;
+            }
+            &.icon-zfb{
+                background: url('../images/zf.png') no-repeat 50% 50% / 100% auto;
+            }
+            &.icon-bank{
+                background: url('../images/yhk.png') no-repeat 50% 50% / 100% auto;
+            }*/
+        }
+        div{
+            h3{
+                font-size: 1.5rem;
+                color: #333;
+            }
+            p{
+                font-size: 1.2rem;
+                color: #9d9e9e;
+                &.red{
+                    color: #ed5b4c;
+                }
+            }
+        }
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+}
+
+.keyboard{
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+    opacity: 1;
+    display: flex;
+    .num-keys{
+        display: flex;
+        flex:3;
+        flex-wrap: wrap;
+        span{
+            flex: 0 0 33.33%;
+            display: flex;
+            height: 4rem;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            border-right: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            &:nth-last-child(2){
+                flex:2;
+            }
+        }
+    }
+    .ctrl-keys{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        em{
+            display: flex;
+            height: 4rem;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #ddd;
+        }
+        span{
+            flex: 3;
+            background: #ff585f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #fff;
+            &.disabled{
+                background: rgba(255,88,95,0.5);
+            }
+        }
+    }
+}
